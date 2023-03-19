@@ -1,0 +1,22 @@
+[
+  {
+    "name": "IPhone 13",
+    "price": "45,000",
+    "quantity": 10
+  },
+  {
+    "name": "IPhone 13 Pro Max",
+    "price": "50,000",
+    "quantity": 3
+  },
+  {
+    "name": "IPhone 14",
+    "price": "60,000",
+    "quantity": 5
+  },
+  {
+    "name": "IPhone 14 Pro Max",
+    "price": "65,000",
+    "quantity": 2
+  }
+]

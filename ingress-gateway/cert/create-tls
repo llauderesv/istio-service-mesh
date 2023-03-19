@@ -1,0 +1,5 @@
+#!/bin/bash
+
+kubectl -n istio-system create secret tls tls-certificate \
+  --key ./localhost.key \
+  --cert ./localhost.crt

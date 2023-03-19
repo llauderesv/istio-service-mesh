@@ -1,0 +1,4 @@
+#!/bin/bash
+
+k run -i --rm tmp-po --image=yauritux/busybox-curl:latest \
+-- /bin/sh -c 'curl -s https://jsonplaceholder.typicode.com/users'

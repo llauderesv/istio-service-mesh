@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: catalog-service-v2
+spec:
+  selector:
+    matchLabels:
+      app: catalog-service
+      version: v2
+  template:
+    metadata:
+      labels:
+        app: catalog-service
+        version: v2
+    spec:
+      containers:
+        - name: catalog-service
+          image: catalog-service:v2
+          resources:
+            limits:
+              memory: "64Mi"
+              cpu: "500m"
+          ports:
+            - containerPort: 80

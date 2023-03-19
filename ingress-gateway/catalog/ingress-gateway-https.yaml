@@ -1,0 +1,25 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: Gateway
+metadata:
+  name: catalog-svc-gateway # name of the Ingress Gateway
+spec:
+  selector:
+    istio: ingressgateway # Gateway should be used in Istio (By default we're using the default gateway)
+  servers:
+    - port:
+        number: 80
+        name: http
+        protocol: HTTP
+      hosts:
+        - "catalog.istioinaction.io"
+      tls:
+        httpsRedirect: true
+    - port:
+        number: 443
+        name: https
+        protocol: HTTPS
+      hosts:
+        - "catalog.istioinaction.io"
+      tls:
+        credentialName: tls-certificate
+        mode: SIMPLE

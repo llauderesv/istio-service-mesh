@@ -1,21 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: catalog-service-v2
+  name: catalog-detail
+  annotations:
+    sidecar.istio.io/inject: "false"
 spec:
   selector:
     matchLabels:
-      app: catalog-service
-      version: v2
+      app: catalog-detail
+      version: v1
   template:
     metadata:
       labels:
-        app: catalog-service
-        version: v2
+        app: catalog-detail
+        version: v1
     spec:
       containers:
-        - name: catalog-service
-          image: catalog-service:v2.4
+        - name: catalog-detail
+          image: catalog-detail-service:v1
           resources:
             limits:
               memory: "64Mi"

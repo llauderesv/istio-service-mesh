@@ -1,5 +1,7 @@
+// @ts-nocheck
 const express = require('express');
 const morgan = require('morgan');
+const fetch = require('node-fetch');
 const data = require('./data.json');
 
 const app = express();
@@ -15,6 +17,20 @@ app.get('/', (req, res) => {
 });
 
 app.get('/healthz', (req, res) => res.json({ healthy: 'ok' }).status(200));
+app.get('/api/v1/products', async (req, res) => {
+  const itemsPromises = data.map(async item => {
+    const details = await fetch(
+      `http://catalog-detail-service.products.svc.cluster.local:4001/api/v1/details?name=${item.name}`
+    ).then(res => res.json());
+
+    item['details'] = details;
+    return item;
+  });
+
+  const items = await Promise.all(itemsPromises);
+  res.json(items).status(200);
+});
+
 app.get('/api/v1/products', (req, res) => {
   res.json(data).status(200);
 });

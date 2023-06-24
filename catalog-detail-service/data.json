@@ -1,0 +1,72 @@
+[
+  {
+    "name": "IPhone 13",
+    "display": {
+      "type": "Super Retina XDR OLED",
+      "size": "6.1 inches",
+      "resolution": "2532 x 1170 pixels",
+      "pixelDensity": "460 ppi",
+      "refreshRate": "60 Hz"
+    },
+    "processor": {
+      "chipset": "Apple A15 Bionic",
+      "cpu": "Hexa-core",
+      "gpu": "Apple GPU (4-core graphics)"
+    },
+    "storage": {
+      "options": ["128GB", "256GB", "512GB", "1TB"]
+    }
+  },
+  {
+    "name": "IPhone 13 Pro Max",
+    "display": {
+      "type": "Retina HD IPS LCD",
+      "size": "4.7 inches",
+      "resolution": "1334 x 750 pixels",
+      "pixelDensity": "326 ppi"
+    },
+    "processor": {
+      "chipset": "Apple A13 Bionic",
+      "cpu": "Hexa-core",
+      "gpu": "Apple GPU (4-core graphics)"
+    },
+    "storage": {
+      "options": ["64GB", "128GB", "256GB"]
+    }
+  },
+  {
+    "name": "IPhone 14",
+    "display": {
+      "type": "Super Retina XDR OLED",
+      "size": "6.1 inches",
+      "resolution": "2532 x 1170 pixels",
+      "pixelDensity": "460 ppi",
+      "refreshRate": "120 Hz"
+    },
+    "processor": {
+      "chipset": "Apple A15 Bionic",
+      "cpu": "Hexa-core",
+      "gpu": "Apple GPU (4-core graphics)"
+    },
+    "storage": {
+      "options": ["128GB", "256GB", "512GB", "1TB"]
+    }
+  },
+  {
+    "name": "IPhone 14 Pro Max",
+    "display": {
+      "type": "Super Retina XDR OLED",
+      "size": "6.1 inches",
+      "resolution": "2532 x 1170 pixels",
+      "pixelDensity": "460 ppi"
+    },
+    "processor": {
+      "chipset": "Apple A14 Bionic",
+      "cpu": "Hexa-core",
+      "gpu": "Apple GPU (4-core graphics)"
+    },
+    "storage": {
+      "options": ["64GB", "128GB", "256GB"]
+    }
+  }
+]
